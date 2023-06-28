@@ -10,7 +10,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   return Promise.allSettled(promises)
     .then((settledPromises) => {
       const results = [];
-      for (let i = 0; i < settledPromises.length; i++) {
+      for (let i = 0; i < settledPromises.length; i += 1) {
         const result = settledPromises[i];
         results.push({
           status: result.status,
